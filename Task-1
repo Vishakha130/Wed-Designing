@@ -1,0 +1,843 @@
+// program 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML5 Structure Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: #444;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 0;
+            display: inline-block;
+        }
+        main {
+            padding: 20px;
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        article {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #007bff;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #0056b3;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Semantic Website</h1>
+        <p>A demonstration of proper HTML5 structure</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>About This Page</h2>
+            <p>This page illustrates the correct usage of semantic HTML5 tags to create a well-structured and accessible web document. We aim to show how elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;
+
+// program 2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML5 Structure with Core CSS Styling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styles & Font Family */
+        body {
+            font-family: 'Roboto', sans-serif; /* Web-safe alternative: Arial */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Light background */
+            color: #333; /* Dark text color for contrast */
+            box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+        }
+
+        /* Box-sizing for all elements */
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #2c3e50; /* Dark blue header background */
+            color: #fff; /* White text for contrast */
+            padding: 20px 0; /* Top/bottom padding */
+            text-align: center;
+            margin-bottom: 20px; /* Space below header */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif; /* Heading font */
+            font-size: 2.8em; /* Larger heading */
+            margin-bottom: 10px; /* Space below h1 */
+            color: #fff; /* White heading in header */
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-top: 0; /* Remove default top margin */
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #34495e; /* Slightly lighter dark blue for nav */
+            padding: 10px 0;
+            margin-bottom: 20px; /* Space below nav */
+        }
+
+        nav ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block; /* Display list items horizontally */
+            margin: 0 18px; /* Space between nav items */
+            padding: 5px 0; /* Vertical padding for click area */
+        }
+
+        nav ul li a {
+            color: #ecf0f1; /* Light gray for links */
+            text-decoration: none; /* Remove underline */
+            font-weight: 500;
+            padding: 8px 15px; /* Padding inside links */
+            border-radius: 5px; /* Slightly rounded corners */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #3f556a; /* Darker background on hover */
+            color: #fff; /* White text on hover */
+        }
+
+        /* Main Content Area */
+        main {
+            padding: 30px; /* Internal padding */
+            max-width: 1000px; /* Max width for content */
+            margin: 20px auto; /* Center the main content with top/bottom margin */
+            background-color: #fff; /* White background for main content */
+            border-radius: 8px; /* Rounded corners for main container */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* More prominent shadow */
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px; /* Space between sections */
+            padding: 25px; /* Internal padding for sections */
+            border: 1px solid #e0e0e0; /* Light grey border */
+            border-radius: 6px; /* Rounded corners */
+            background-color: #fff; /* White background for sections */
+        }
+
+        section:last-child {
+            margin-bottom: 0; /* No margin below the last section */
+        }
+
+        /* Article Styling */
+        article {
+            background-color: #fcfcfc; /* Very light background for articles */
+            padding: 20px; /* Internal padding */
+            margin-bottom: 25px; /* Space between articles */
+            border-left: 5px solid #28a745; /* Green left border as an accent */
+            border-radius: 4px; /* Slightly rounded corners */
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+        }
+
+        article:last-of-type {
+            margin-bottom: 0; /* No margin below the last article in a section */
+        }
+
+        /* Headings Hierarchy */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif; /* Consistent heading font */
+            color: #2980b9; /* A vibrant blue for headings */
+            margin-top: 0.8em; /* Adjusted top margin */
+            margin-bottom: 0.5em; /* Adjusted bottom margin */
+        }
+
+        h2 {
+            font-size: 2.2em;
+            padding-bottom: 10px; /* Space below H2 */
+            border-bottom: 1px dashed #eee; /* Light dashed line below H2 */
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: #3498db; /* Slightly lighter blue for H3 */
+        }
+
+        h4 {
+            font-size: 1.4em;
+            color: #555; /* Dark grey for H4 */
+            margin-top: 20px; /* More space above H4 */
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            margin-bottom: 1em; /* Space below paragraphs */
+            line-height: 1.7; /* Increased line height for readability */
+        }
+
+        /* List Styling (Unordered & Ordered) */
+        ul, ol {
+            margin-left: 25px; /* Indent lists */
+            margin-bottom: 1.5em; /* Space below lists */
+            padding-left:
+
+// program 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML5 Structure with Core CSS Styling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styles & Font Family */
+        body {
+            font-family: 'Roboto', sans-serif; /* Web-safe alternative: Arial */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Light background */
+            color: #333; /* Dark text color for contrast */
+            box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+        }
+
+        /* Box-sizing for all elements */
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #2c3e50; /* Dark blue header background */
+            color: #fff; /* White text for contrast */
+            padding: 20px 0; /* Top/bottom padding */
+            text-align: center;
+            margin-bottom: 20px; /* Space below header */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif; /* Heading font */
+            font-size: 2.8em; /* Larger heading */
+            margin-bottom: 10px; /* Space below h1 */
+            color: #fff; /* White heading in header */
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-top: 0; /* Remove default top margin */
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #34495e; /* Slightly lighter dark blue for nav */
+            padding: 10px 0;
+            margin-bottom: 20px; /* Space below nav */
+        }
+
+        nav ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block; /* Display list items horizontally */
+            margin: 0 18px; /* Space between nav items */
+            padding: 5px 0; /* Vertical padding for click area */
+        }
+
+        nav ul li a {
+            color: #ecf0f1; /* Light gray for links */
+            text-decoration: none; /* Remove underline */
+            font-weight: 500;
+            padding: 8px 15px; /* Padding inside links */
+            border-radius: 5px; /* Slightly rounded corners */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #3f556a; /* Darker background on hover */
+            color: #fff; /* White text on hover */
+        }
+
+        /* Main Content Area */
+        main {
+            padding: 30px; /* Internal padding */
+            max-width: 1000px; /* Max width for content */
+            margin: 20px auto; /* Center the main content with top/bottom margin */
+            background-color: #fff; /* White background for main content */
+            border-radius: 8px; /* Rounded corners for main container */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* More prominent shadow */
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px; /* Space between sections */
+            padding: 25px; /* Internal padding for sections */
+            border: 1px solid #e0e0e0; /* Light grey border */
+            border-radius: 6px; /* Rounded corners */
+            background-color: #fff; /* White background for sections */
+        }
+
+        section:last-child {
+            margin-bottom: 0; /* No margin below the last section */
+        }
+
+        /* Article Styling */
+        article {
+            background-color: #fcfcfc; /* Very light background for articles */
+            padding: 20px; /* Internal padding */
+            margin-bottom: 25px; /* Space between articles */
+            border-left: 5px solid #28a745; /* Green left border as an accent */
+            border-radius: 4px; /* Slightly rounded corners */
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+        }
+
+        article:last-of-type {
+            margin-bottom: 0; /* No margin below the last article in a section */
+        }
+
+        /* Headings Hierarchy */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif; /* Consistent heading font */
+            color: #2980b9; /* A vibrant blue for headings */
+            margin-top: 0.8em; /* Adjusted top margin */
+            margin-bottom: 0.5em; /* Adjusted bottom margin */
+        }
+
+        h2 {
+            font-size: 2.2em;
+            padding-bottom: 10px; /* Space below H2 */
+            border-bottom: 1px dashed #eee; /* Light dashed line below H2 */
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: #3498db; /* Slightly lighter blue for H3 */
+        }
+
+        h4 {
+            font-size: 1.4em;
+            color: #555; /* Dark grey for H4 */
+            margin-top: 20px; /* More space above H4 */
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            margin-bottom: 1em; /* Space below paragraphs */
+            line-height: 1.7; /* Increased line height for readability */
+        }
+
+        /* List Styling (Unordered & Ordered) */
+        ul, ol {
+            margin-left: 25px; /* Indent lists */
+            margin-bottom: 1.5em; /* Space below lists */
+            padding-left: 0; /* Remove default padding, margin-left handles indent */
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.6em; /* Space between list items */
+        }
+
+        ul {
+            list-style: disc inside; /* Default disc bullets */
+        }
+
+        ol {
+            list-style: decimal inside; /* Default numbered list */
+        }
+
+        /* Link Styling */
+        a {
+            color: #007bff; /* Standard blue for general links */
+            text-decoration: none; /* No underline by default */
+            transition: color 0.3s ease; /* Smooth transition for hover */
+        }
+
+        a:hover,
+        a:focus {
+            color: #0056b3; /* Darker blue on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        address {
+            font-style: normal; /* Override italic default */
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-left: 4px solid #6c757d; /* Grey border for address */
+            border-radius: 4px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #34495e; /* Matching nav background */
+            color: #ecf0f1; /* Light text color */
+            margin-top: 40px; /* Space above footer */
+            font-size: 0.9em;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow above footer */
+        }
+
+        footer p {
+            margin: 5px 0; /* Small margin for footer paragraphs */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Semantic Website</h1>
+        <p>A demonstration of proper HTML5 structure and stylish CSS</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>About This Page</h2>
+            <p>This page illustrates the correct usage of semantic HTML5 tags to create a well-structured and accessible web document. We aim to show how elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> should be used, complemented by a clean and responsive CSS design.</p>
+
+            <h3>Key Features of Semantic HTML</h3>
+            <ul>
+                <li>Improved accessibility for screen readers and assistive technologies.</li>
+                <li>Better SEO performance due to meaningful content structure.</li>
+                <li>Cleaner and more readable code, making collaboration easier.</li>
+                <li>Enhanced maintainability and future expandability of the codebase.</li>
+            </ul>
+            <p>We've meticulously applied the box model to ensure proper spacing and visual hierarchy across all elements. Colors are chosen to provide good contrast and a pleasant user experience.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <article>
+                <h3>Web Design & Development</h3>
+                <p>We offer comprehensive web design and development services, creating responsive and user-friendly websites tailored to your needs. Our focus is on delivering modern, performant, and scalable web solutions.</p>
+                <h4>Our Development Process</h4>
+                <ol>
+                    <li><strong>Discovery & Planning:</strong> Understanding your vision and requirements.</li>
+                    <li><strong>Design & Prototyping:</strong> Crafting intuitive user interfaces and experiences.</li>
+                    <li><strong>Development & Coding:</strong> Bringing designs to life with robust code.</li>
+                    <li><strong>Testing & Deployment:</td>:</strong> Ensuring quality and seamless launch.</li>
+                    <li><strong>Maintenance & Support:</strong> Ongoing assistance and updates.</li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>Digital Marketing Solutions</h3>
+                <p>Boost your online presence and reach your target audience with our effective digital marketing strategies. We focus on data-driven approaches to maximize your ROI.</p>
+                <h4>Marketing Channels We Utilize</h4>
+                <ul>
+                    <li>Search Engine Optimization (SEO) to improve organic visibility.</li>
+                    <li>Pay-Per-Click (PPC) Advertising for immediate traffic and leads.</li>
+                    <li>Social Media Marketing to engage with your community.</li>
+                    <li>Content Marketing for building authority and attracting inbound leads.</li>
+                    <li>Email Marketing for direct customer communication.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Have questions or need a quote for your next project? Feel free to reach out to us!</p>
+            <h3>Contact Information</h3>
+            <address>
+                <strong>Semantic Solutions Inc.</strong><br>
+                123 Web Standard Avenue<br>
+                Tech City, HTML5 98765<br>
+                <br>
+                Email: <a href="mailto:info@semanticsolutions.com">info@semanticsolutions.com</a><br>
+                Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+            </address>
+            <p>Our team is available Monday to Friday, 9:00 AM to 5:00 PM (Your Local Time).</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Semantic Website Example. All rights reserved.</p>
+        <p>This page is created for educational purposes, demonstrating HTML5 semantics and CSS best practices.</p>
+    </footer>
+
+</body>
+</html>
+//program 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML5 Structure with Core CSS Styling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Reset and Base Styles */
+        body {
+            font-family: 'Roboto', sans-serif; /* Primary font, with sans-serif as fallback */
+            line-height: 1.6; /* Improved readability for paragraphs */
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            background-color: #f8f8f8; /* Light grey background for the page */
+            color: #333; /* Dark grey text color for good contrast */
+            box-sizing: border-box; /* Ensures padding and border are included in an element's total width and height */
+        }
+
+        /* Apply box-sizing to all elements for consistent box model */
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #2c3e50; /* Dark blue header background */
+            color: #fff; /* White text for strong contrast */
+            padding: 20px 0; /* Vertical padding */
+            text-align: center; /* Center align text within the header */
+            margin-bottom: 20px; /* Space between header and the content below */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif; /* Distinct font for the main heading */
+            font-size: 2.8em; /* Large size for main title */
+            margin-bottom: 10px; /* Space below the H1 */
+            color: #fff; /* White heading color */
+        }
+
+        header p {
+            font-size: 1.1em; /* Slightly larger paragraph text */
+            margin-top: 0; /* Remove default top margin for consistency */
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #34495e; /* Slightly lighter dark blue for the navigation bar */
+            padding: 10px 0; /* Vertical padding */
+            margin-bottom: 20px; /* Space below the navigation */
+        }
+
+        nav ul {
+            list-style: none; /* Remove default bullet points */
+            padding: 0; /* Remove default padding */
+            text-align: center; /* Center align navigation items */
+            margin: 0; /* Remove default margin */
+        }
+
+        nav ul li {
+            display: inline-block; /* Display list items horizontally */
+            margin: 0 18px; /* Horizontal spacing between navigation items */
+            padding: 5px 0; /* Vertical padding for touch/click area */
+        }
+
+        nav ul li a {
+            color: #ecf0f1; /* Light grey color for navigation links */
+            text-decoration: none; /* Remove default underline */
+            font-weight: 500; /* Medium font weight */
+            padding: 8px 15px; /* Padding inside links for better click area */
+            border-radius: 5px; /* Slightly rounded corners for links */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #3f556a; /* Darker background on hover/focus */
+            color: #fff; /* White text on hover/focus */
+        }
+
+        /* Main Content Area Styling */
+        main {
+            padding: 30px; /* Internal padding for the main content area */
+            max-width: 1000px; /* Maximum width to keep content readable on large screens */
+            margin: 20px auto; /* Center the main content horizontally with vertical margin */
+            background-color: #fff; /* White background for the main content */
+            border-radius: 8px; /* Rounded corners for the main container */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* More prominent shadow for main content */
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px; /* Space between sections */
+            padding: 25px; /* Internal padding for sections */
+            border: 1px solid #e0e0e0; /* Light grey border around sections */
+            border-radius: 6px; /* Rounded corners for sections */
+            background-color: #fff; /* White background for sections */
+        }
+
+        section:last-child {
+            margin-bottom: 0; /* No margin below the last section on the page */
+        }
+
+        /* Article Styling */
+        article {
+            background-color: #fcfcfc; /* Very light background for articles */
+            padding: 20px; /* Internal padding */
+            margin-bottom: 25px; /* Space between articles within a section */
+            border-left: 5px solid #28a745; /* Green left border as an accent */
+            border-radius: 4px; /* Slightly rounded corners */
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* Very subtle shadow for articles */
+        }
+
+        article:last-of-type {
+            margin-bottom: 0; /* No margin below the last article in a section */
+        }
+
+        /* Headings Hierarchy Styling */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif; /* Consistent heading font */
+            color: #2980b9; /* A vibrant blue for main headings */
+            margin-top: 0.8em; /* Adjusted top margin for consistent spacing */
+            margin-bottom: 0.5em; /* Adjusted bottom margin for consistent spacing */
+        }
+
+        h2 {
+            font-size: 2.2em; /* Large size for section headings */
+            padding-bottom: 10px; /* Space below H2 */
+            border-bottom: 1px dashed #eee; /* Light dashed line below H2 for separation */
+            margin-bottom: 25px; /* More space below the H2 and its border */
+        }
+
+        h3 {
+            font-size: 1.8em; /* Medium-large size for article headings */
+            color: #3498db; /* Slightly lighter blue for H3 */
+        }
+
+        h4 {
+            font-size: 1.4em; /* Smaller heading for sub-sections */
+            color: #555; /* Dark grey for H4 */
+            margin-top: 20px; /* More space above H4 to distinguish it */
+            margin-bottom: 10px;
+        }
+
+        /* Paragraph Styling */
+        p {
+            margin-bottom: 1em; /* Space below paragraphs */
+            line-height: 1.7; /* Increased line height for better readability */
+        }
+
+        /* List Styling (Unordered & Ordered) */
+        ul, ol {
+            margin-left: 25px; /* Indent lists */
+            margin-bottom: 1.5em; /* Space below lists */
+            padding-left: 0; /* Remove default padding, margin-left handles indent */
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.6em; /* Space between individual list items */
+        }
+
+        ul {
+            list-style: disc inside; /* Default disc bullets, inside content flow */
+        }
+
+        ol {
+            list-style: decimal inside; /* Default numbered list, inside content flow */
+        }
+
+        /* General Link Styling */
+        a {
+            color: #007bff; /* Standard blue for general links */
+            text-decoration: none; /* No underline by default */
+            transition: color 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+        a:hover,
+        a:focus {
+            color: #0056b3; /* Darker blue on hover/focus */
+            text-decoration: underline; /* Underline on hover/focus for clear indication */
+        }
+
+        /* Address Styling */
+        address {
+            font-style: normal; /* Override default italic style for address */
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0; /* Light grey background for address block */
+            border-left: 4px solid #6c757d; /* Grey left border for emphasis */
+            border-radius: 4px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #34495e; /* Matching navigation background */
+            color: #ecf0f1; /* Light text color for contrast */
+            margin-top: 40px; /* Space above the footer */
+            font-size: 0.9em; /* Slightly smaller text in the footer */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow above footer */
+        }
+
+        footer p {
+            margin: 5px 0; /* Small margin for paragraphs within the footer */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Semantic Website</h1>
+        <p>A demonstration of proper HTML5 structure and stylish CSS</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>About This Page</h2>
+            <p>This page illustrates the correct usage of semantic HTML5 tags to create a well-structured and accessible web document. We aim to show how elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> should be used, complemented by a clean and responsive CSS design.</p>
+
+            <h3>Key Features of Semantic HTML</h3>
+            <ul>
+                <li>Improved accessibility for screen readers and assistive technologies.</li>
+                <li>Better SEO performance due to meaningful content structure.</li>
+                <li>Cleaner and more readable code, making collaboration easier.</li>
+                <li>Enhanced maintainability and future expandability of the codebase.</li>
+            </ul>
+            <p>We've meticulously applied the box model to ensure proper spacing and visual hierarchy across all elements. Colors are chosen to provide good contrast and a pleasant user experience.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <article>
+                <h3>Web Design & Development</h3>
+                <p>We offer comprehensive web design and development services, creating responsive and user-friendly websites tailored to your needs. Our focus is on delivering modern, performant, and scalable web solutions.</p>
+                <h4>Our Development Process</h4>
+                <ol>
+                    <li><strong>Discovery & Planning:</strong> Understanding your vision and requirements.</li>
+                    <li><strong>Design & Prototyping:</strong> Crafting intuitive user interfaces and experiences.</li>
+                    <li><strong>Development & Coding:</strong> Bringing designs to life with robust code.</li>
+                    <li><strong>Testing & Deployment:</strong> Ensuring quality and seamless launch.</li>
+                    <li><strong>Maintenance & Support:</strong> Ongoing assistance and updates.</li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>Digital Marketing Solutions</h3>
+                <p>Boost your online presence and reach your target audience with our effective digital marketing strategies. We focus on data-driven approaches to maximize your ROI.</p>
+                <h4>Marketing Channels We Utilize</h4>
+                <ul>
+                    <li>Search Engine Optimization (SEO) to improve organic visibility.</li>
+                    <li>Pay-Per-Click (PPC) Advertising for immediate traffic and leads.</li>
+                    <li>Social Media Marketing to engage with your community.</li>
+                    <li>Content Marketing for building authority and attracting inbound leads.</li>
+                    <li>Email Marketing for direct customer communication.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>Have questions or need a quote for your next project? Feel free to reach out to us!</p>
+            <h3>Contact Information</h3>
+            <address>
+                <strong>Semantic Solutions Inc.</strong><br>
+                123 Web Standard Avenue<br>
+                Tech City, HTML5 98765<br>
+                <br>
+                Email: <a href="mailto:info@semanticsolutions.com">info@semanticsolutions.com</a><br>
+                Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+            </address>
+            <p>Our team is available Monday to Friday, 9:00 AM to 5:00 PM (Your Local Time).</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Semantic Website Example. All rights reserved.</p>
+        <p>This page is created for educational purposes, demonstrating HTML5 semantics and CSS best practices.</p>
+    </footer>
+
+</body>
+</html>
+// Program 5
