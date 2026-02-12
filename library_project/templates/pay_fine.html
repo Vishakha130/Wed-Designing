@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fine Payment</title>
+  <style>
+    .nav {
+      background: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    .readonly {
+      background: #eee;
+      padding: 5px;
+      border: 1px solid #ccc;
+      width: 200px;
+      display: inline-block;
+    }
+
+    form {
+      margin-top: 20px;
+      line-height: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <span>Instructions | <a href="/" style="color:lime">Chart</a> | Admin Login | User Login</span>
+  </div>
+
+  <h2>Fine Payment Module</h2>
+  <form action="/" method="GET" onsubmit="return validateFine()">
+    <label>Book Serial No:</label><br>
+    <div class="readonly">{{ serial_no }}</div><br>
+
+    <label>Calculated Fine:</label><br>
+    <div class="readonly" id="fine_amt">${{ fine_amount }}</div><br>
+
+    <label>Fine Paid:</label>
+    <input type="checkbox" id="paid_checkbox" name="fine_paid">
+    <br>
+
+    <label>Remarks (Optional):</label><br>
+    <textarea name="remarks"></textarea><br>
+
+    <button type="submit">Confirm Transaction</button>
+  </form>
+
+  <script>
+    function validateFine() {
+      const fine = parseFloat(document.getElementById('fine_amt').innerText.replace('$', ''));
+      const isChecked = document.getElementById('paid_checkbox').checked;
+
+      // Logic: Fine Paid checkbox needs to be selected for pending fine
+      if (fine > 0 && !isChecked) {
+        alert("Error: You must check 'Fine Paid' for pending transactions.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

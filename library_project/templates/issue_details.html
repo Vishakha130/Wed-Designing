@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Issue Book Details</title>
+  <style>
+    .nav {
+      background: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    .readonly-field {
+      background-color: #e9e9e9;
+      border: 1px solid #999;
+      padding: 5px;
+      width: 200px;
+      display: inline-block;
+    }
+
+    form {
+      margin-top: 20px;
+      line-height: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <span>Instructions | <a href="/" style="color:lime">Chart</a> | Admin Login | User Login</span>
+  </div>
+
+  <h2>Book Issue Details</h2>
+  <form action="/" method="GET">
+    <label>Book Name:</label><br>
+    <div class="readonly-field">{{ book.title }}</div><br>
+
+    <label>Author Name:</label><br>
+    <div class="readonly-field">{{ book.author }}</div><br>
+
+    <label>Issue Date:</label><br>
+    <div class="readonly-field">{{ issue_date }}</div><br>
+
+    <label>Return Date (Estimated):</label><br>
+    <input type="text" value="{{ return_date }}" name="return_date"><br>
+
+    <button type="submit">Confirm Issuance</button>
+  </form>
+</body>
+
+</html>
